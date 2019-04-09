@@ -2,3 +2,5 @@ Hello CG
 welcome to CG
 New jenkins project
 proj2
+
+integration with git
