@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'touch /tmp/t1234.txt'
+                sh 'touch /tmp/t123.txt'
             }
         }
         stage('Test') {
