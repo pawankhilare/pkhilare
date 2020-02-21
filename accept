@@ -1,0 +1,14 @@
+#!/bin/bash
+
+user_func (){
+GREEN="\033[1;32m"
+NOCOLOR="\033[0m"
+
+echo -e "${GREEN}"--------------------------------------------------------"""${NOCOLOR}"
+  whoami
+  id
+echo -e "${NOCOLOR}"
+  uname -a
+}
+export -f user_func
+su oratest -c 'user_func'
