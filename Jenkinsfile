@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh "accept.sh"
+                script 'accept.sh'
             }
         }
         stage('Test') {
