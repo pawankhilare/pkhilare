@@ -12,7 +12,7 @@ pipeline{
 		echo "This is my cft build one"
 		echo "$AWS_ACCESS_KEY_ID"
 		echo "$AWS_SECRET_ACCESS_KEY"
-		cfnUpdate(stack: "$STACK", file: 'template.yaml')
+			cfnUpdate(stack: "${STACK}", file: 'template.yaml')
 		}
 	}
 }
