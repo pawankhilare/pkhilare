@@ -15,7 +15,7 @@ pipeline{
 		echo "This is my cft build one"
 		cfnUpdate(
 			file: params.cftfile,
-			stackName: params.Stackname
+			stack: params.Stackname
 			)
 		}
 	}
