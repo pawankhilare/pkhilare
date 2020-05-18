@@ -11,7 +11,7 @@ pipeline{
 		def update = {
 		cfnUpdate(
 			file: params.cftfile,
-			stack: params.test-stack
+			stack: params.stackname
 			)
 			}
 		environment {
