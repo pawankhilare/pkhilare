@@ -10,7 +10,7 @@ pipeline{
 		stage('Build') {
 		steps {
 		echo "This is my cft build one"
-		cfnDeploy(
+		cfnUpdate(
 			file: params.cftfile,
 			stackName: params.Stackname
 			)
