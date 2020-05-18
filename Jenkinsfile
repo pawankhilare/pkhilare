@@ -13,7 +13,7 @@ pipeline{
             }
 		steps {
 		echo "This is my cft build one"
-		def outputs = cfnUpdate(stack:'params.stackname', file:'params.cftfile')
+		cfnUpdate(stack:'params.stackname', file:'params.cftfile')
 		}
 	}
 }
