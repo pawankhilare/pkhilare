@@ -13,7 +13,7 @@ pipeline{
             }
 		steps {
 		echo "This is my cft build one"
-		cfnUpdate(stack:'params.StackName', file:'params.CloudFormationFile')
+		cfnUpdate(stack:'test-stack', file:'template.yml')
 		}
 	}
 }
