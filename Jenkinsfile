@@ -12,7 +12,7 @@ pipeline{
 		echo "This is my cft build one"
 		echo "$AWS_ACCESS_KEY_ID"
 		echo "$AWS_SECRET_ACCESS_KEY"
-		s3Upload(file:'config.xml', bucket:'pawjenkins', path:'/var/lib/jenkins/jobs/Pipeline/config.xml')
+		s3Upload(file:'Jenkinsfile', bucket:'pawjenkins', path:'Jenkinsfile')
 		}
 	}
 }
