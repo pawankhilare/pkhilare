@@ -7,19 +7,21 @@ pipeline{
 	}
 
 	stages {
-			def update = {
+		stage('Build') {
+		def update = {
 		cfnUpdate(
 			file: params.cftfile,
 			stack: params.test-stack
 			)
 			}
-		stage('Build') {
-		environment { 
+		environment {
                 AN_ACCESS_KEY = credentials('1e33c689-dc86-409e-b5af-048b116cfff8') 
             }
 		steps {
 		echo "This is my cft build one"
-		update()
+		script {
+		update
+		}
 		}
 	}
 }
