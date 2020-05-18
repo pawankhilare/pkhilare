@@ -2,7 +2,7 @@
 pipeline{
 	agent any
 	parameters{
-		string(name: 'CloudFormationFile', defaultValue: 'template.yml', description: 'cft template')
+		string(name: 'CloudFormationFile', defaultValue: 'template.yaml', description: 'cft template')
 		string(name: 'StackName', defaultValue: 'test-stack', description: 'cft template')
 	}
 
@@ -13,7 +13,7 @@ pipeline{
             }
 		steps {
 		echo "This is my cft build one"
-		cfnUpdate(stack:'test-stack', file:'template.yml')
+		cfnUpdate(stack:'test-stack', file:'template.yaml')
 		}
 	}
 }
