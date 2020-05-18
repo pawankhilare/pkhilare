@@ -3,6 +3,7 @@ pipeline{
 	agent any
 	parameters{
 		string(name: 'cftfile', defaultValue: 'template.yml', description: 'cft template')
+		string(name: 'stackname', defaultValue: 'test-stack', description: 'cft template')
 	}
 
 	stages {
@@ -12,10 +13,13 @@ pipeline{
             }
 		steps {
 		echo "This is my cft build one"
+		def update = {
 		cfnUpdate(
 			file: params.cftfile,
-			stack: teststack
+			stack: params.test-stack
 			)
+			}
+		update()
 		}
 	}
 }
