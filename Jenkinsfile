@@ -7,10 +7,10 @@ pipeline{
 	}
 
 	stages {
-		stage(Git checkout) {
+		stage('Git checkout') {
 		checkout scm
 		}
-		stage(Build) {
+		stage('Build') {
 		echo "This is my cft build one"
 		cfnDeploy(
 			file: params.cftfile,
