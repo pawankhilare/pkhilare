@@ -3,7 +3,7 @@ pipeline{
 	agent any
 	parameters{
 		string(name: 'StackName', defaultValue: 'test-stack', description: 'cft template')
-		string(name: 'CloudFormationTemplate', defaultValue: 'template.yaml', description: 'cft template')
+		string(name: 'CloudFormationTemplate', defaultValue: 'template.json', description: 'cft template')
 	}
 
 	stages {
