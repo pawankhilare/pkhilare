@@ -6,7 +6,7 @@
 			"Type" : "AWS::S3::Bucket",
 			"DeletionPolicy": "Retain",
 			"Properties" : {
-				"BucketName" : "cftbucket123456"
+				"BucketName" : "cftbucket12"
          }
      }
 }
