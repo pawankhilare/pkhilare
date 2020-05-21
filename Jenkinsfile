@@ -7,11 +7,11 @@ pipeline{
 		stage('Build') {
 		steps {
 		echo "This is my cft build one"
-		step([$class: 'AnsibleAdHocCommandBuilder']) (
+		step([$class: 'AnsibleAdHocCommandBuilder',
 		hostPattern: 'localhost',
 		module: 'command',
 		command: 'cat /etc/hosts'
-		)
+		])
 		}
 	}
 }
